@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Manager</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f7f6; padding: 50px; }
+        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 800px; margin: auto; }
+        input { padding: 8px; margin-right: 10px; border: 1px solid #ddd; border-radius: 4px; }
+        button { padding: 8px 15px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        table { width: 100%; margin-top: 20px; border-collapse: collapse; }
+        th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
+        .del-link { color: #dc3545; text-decoration: none; }
+        .reset-link { display: block; margin-top: 30px; text-align: center; color: #999; text-decoration: none; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>📚 Library Management</h2>
+        
+        <form action="/add" method="POST">
+            <input type="text" name="title" placeholder="Book Title" required>
+            <input type="text" name="author" placeholder="Author" required>
+            <button type="submit">Add Book</button>
+        </form>
+
+        <table>
+            <tr><th>ID</th><th>Title</th><th>Author</th><th>Action</th></tr>
+            {% for book in books %}
+            <tr>
+                <td>{{ book[0] }}</td>
+                <td>{{ book[1] }}</td>
+                <td>{{ book[2] }}</td>
+                <td><a href="/delete/{{ book[0] }}" class="del-link">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+
+        <a href="/reset" class="reset-link" onclick="return confirm('Clear all data and reset IDs to 1?')">Reset Database (Start from ID 1)</a>
+    </div>
+</body>
+</html>
