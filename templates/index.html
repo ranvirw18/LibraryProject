@@ -7,34 +7,56 @@
         .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 800px; margin: auto; }
         input { padding: 8px; margin-right: 10px; border: 1px solid #ddd; border-radius: 4px; }
         button { padding: 8px 15px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
+        .btn-search { background: #007bff; }
+        .btn-clear { background: #6c757d; text-decoration: none; font-size: 13px; padding: 8px 12px; border-radius: 4px; color: white; }
         table { width: 100%; margin-top: 20px; border-collapse: collapse; }
         th, td { padding: 12px; border-bottom: 1px solid #eee; text-align: left; }
         .del-link { color: #dc3545; text-decoration: none; }
         .reset-link { display: block; margin-top: 30px; text-align: center; color: #999; text-decoration: none; font-size: 12px; }
+        .section-header { margin-top: 20px; margin-bottom: 10px; font-weight: bold; color: #555; }
     </style>
 </head>
 <body>
     <div class="card">
         <h2>📚 Library Management</h2>
         
+        <div class="section-header">Find a Book</div>
+        <form action="/" method="GET" style="margin-bottom: 30px;">
+            <input type="text" name="search" placeholder="Search by title..." value="{{ request.args.get('search', '') }}">
+            <button type="submit" class="btn-search">Search</button>
+            {% if request.args.get('search') %}
+                <a href="/" class="btn-clear">Clear Search</a>
+            {% endif %}
+        </form>
+
+        <hr>
+
+        <div class="section-header">Add New Book</div>
         <form action="/add" method="POST">
             <input type="text" name="title" placeholder="Book Title" required>
             <input type="text" name="author" placeholder="Author" required>
             <button type="submit">Add Book</button>
         </form>
 
-        <table>
-            <tr><th>ID</th><th>Title</th><th>Author</th><th>Action</th></tr>
-            {% for book in books %}
-            <tr>
-                <td>{{ book[0] }}</td>
-                <td>{{ book[1] }}</td>
-                <td>{{ book[2] }}</td>
-                <td><a href="/delete/{{ book[0] }}" class="del-link">Delete</a></td>
-            </tr>
-            {% endfor %}
-        </table>
-
+    <table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Status</th> <th>Action</th>
+    </tr>
+    {% for book in books %}
+    <tr>
+        <td>{{ book[0] }}</td> <td>{{ book[1] }}</td> <td>{{ book[2] }}</td> <td>{{ book[3] }}</td> <td>
+            <a href="/delete/{{ book[0] }}" class="del-link" onclick="return confirm('Delete this book?')">Delete</a>
+        </td>
+    </tr>
+    {% else %}
+    <tr>
+        <td colspan="5" style="text-align: center; color: #999;">No books found.</td>
+    </tr>
+    {% endfor %}
+</table>
         <a href="/reset" class="reset-link" onclick="return confirm('Clear all data and reset IDs to 1?')">Reset Database (Start from ID 1)</a>
     </div>
 </body>

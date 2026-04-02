@@ -6,8 +6,13 @@ database.connect_db()
 
 @app.route('/')
 def index():
+    # 1. Get the search term from the URL (e.g., /?search=Hobbit)
     query = request.args.get('search')
+    
+    # 2. Pass the query to the database function
+    # Note: Ensure your database.get_books function uses "WHERE title LIKE ?"
     books = database.get_books(query)
+    
     return render_template('index.html', books=books)
 
 @app.route('/add', methods=['POST'])
