@@ -31,6 +31,12 @@ Smart Status Tracking: Visual badges for 'Available' or 'Issued' status.
 
 ID Reset Tool: Integrated feature to wipe data and restart IDs at 1.
 
+## 📸 Screenshots
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/a17ee503-0731-43f5-97c2-dac3555c656c" />
+
+---
+
 🚀 How to Run (On any computer)
 Prerequisites
 Ensure you have Python installed.
