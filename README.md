@@ -31,10 +31,19 @@ Smart Status Tracking: Visual badges for 'Available' or 'Issued' status.
 
 ID Reset Tool: Integrated feature to wipe data and restart IDs at 1.
 
+---
+
 ## 📸 Screenshots
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/a17ee503-0731-43f5-97c2-dac3555c656c" />
+<p align="center">
+  <kbd>
+    <img src="https://github.com/user-attachments/assets/a17ee503-0731-43f5-97c2-dac3555c656c" width="100%" alt="Library Interface">
+  </kbd>
+  <br>
+  <em>Main Library Dashboard: Clean, card-based layout</em>
+</p>
 
+---
 ---
 
 🚀 How to Run (On any computer)
