@@ -1,10 +1,9 @@
-# 📚 Advanced Library Management System
+📚 Advanced Library Management System
 
 A modern, web-based DBMS mini-project built with **Python**, **Flask**, and **SQLite3**. This application provides a clean Graphical User Interface (GUI) to manage a digital library catalog directly from your browser.
 
 ---
-
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 * **Backend:** Python 3.x
 * **Framework:** Flask (Web Server)
 * **Database:** SQLite3 (Relational Database)
@@ -12,8 +11,8 @@ A modern, web-based DBMS mini-project built with **Python**, **Flask**, and **SQ
 
 ---
 
-## 📂 Project Structure
-```text
+📂 Project Structure
+
 LibraryProject/
 ├── app.py              # Main Flask server & routing
 ├── database.py         # SQL logic & DB connections
@@ -33,13 +32,12 @@ ID Reset Tool: Integrated feature to wipe data and restart IDs at 1.
 
 ---
 
-## 📸 Screenshots
+📸 Screenshots
 
 ![image alt](https://github.com/ranvirw18/LibraryProject/blob/4c061726f1916737a30618a225a8cd122bca8b3b/573177397-7cbc1c93-40cc-4d3b-979b-6074bc743346.png)
 ---
 ---
-
-🚀 How to Run (On any computer)
+How to Run (On any computer)
 Prerequisites
 Ensure you have Python installed.
 
