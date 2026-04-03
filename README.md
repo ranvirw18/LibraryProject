@@ -35,7 +35,7 @@ ID Reset Tool: Integrated feature to wipe data and restart IDs at 1.
 
 ## 📸 Screenshots
 
-![image alt](https://github.com/ranvirw18/LibraryProject/blob/main/573177397-7cbc1c93-40cc-4d3b-979b-6074bc743346.png?raw=true)
+![image alt](https://github.com/ranvirw18/LibraryProject/blob/4c061726f1916737a30618a225a8cd122bca8b3b/573177397-7cbc1c93-40cc-4d3b-979b-6074bc743346.png)
 ---
 ---
 
